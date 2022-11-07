@@ -1,0 +1,57 @@
+/*
+ * Processes and analyzes data about basketball stadiums
+ */
+public class BasketballStadiums {
+  private int [] bestCap = new int[5];
+  private String [] bestTeams = new String[5]; 
+  private int [] capacities;
+  private String [] teams;
+
+
+  public BasketballStadiums (String[] teams, int[] capacities) {
+    this.capacities = capacities;
+    this.teams = teams;
+  }
+
+  public void worstAd () {
+    int min = capacities[0];
+    int res = 0;
+    for (int i = 1; i < capacities.length; i++) {
+      if (capacities[i] < min) {
+        res = i;
+        min = capacities[i];
+      }
+    }
+        System.out.println ("The worst team to advertise in is the " + teams[res] + " (Capacity: " + capacities[res] + ")\n\n                        AVOID AT ALL COSTS\n\n" );
+  }
+
+  public void bestAd () {
+    int max = capacities[0];
+    int res = 0;
+    for (int i = 1; i < capacities.length; i++) {
+      if (capacities[i] > max) {
+        res = i;
+        max = capacities[i];
+      }
+    }
+        System.out.println ("The best team to advertise in is the " + teams[res] + " (Capacity: " + capacities[res] + ")\n\n                        SPEND A LOT HERE!\n" );
+  }
+
+
+
+  
+  // TO DO: Declare instance variables for the arrays you need.
+
+
+  
+  // TO DO: Write a constructor to initialize the instance variables.
+
+  
+
+  // TO DO: Write your methods to find the information you need about your data.
+
+
+
+  
+  
+}
