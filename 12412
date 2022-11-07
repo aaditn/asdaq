@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class MyConsole {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    FileReader myFileReader = new FileReader("teams.txt");
+    String[] teams = myFileReader.getStringData(30);
+  
+    myFileReader.setFile("capacities.txt");
+    int[] capacities = myFileReader.getIntData(30);
+
+    BasketballStadiums stadiums = new BasketballStadiums(teams, capacities);
+    
+    stadiums.bestAd();
+    stadiums.worstAd();
+    
+
+    
+    
+
+    // TO DO: Read the files you need into 1D arrays and create a BasketballStadiums object with the arrays.
+
+
+    
+
+    // TO DO: Call the methods you write to provide the information to the user.
+
+
+    
+    
+  }
+}
